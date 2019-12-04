@@ -51,6 +51,9 @@ public class Main {
 		//텍스트와 textArea 경계 사이에 여백을 두기 위해서 emptyBorder 생성
 		Border emptyBorder = BorderFactory.createEmptyBorder(7,7,7,7);
 
+		//textArea에 검정테두리와 여백으로 구성된 경계선 설정
+		ta.setBorder(BorderFactory.createCompoundBorder(lineBorder, emptyBorder));
+
 
 
 
