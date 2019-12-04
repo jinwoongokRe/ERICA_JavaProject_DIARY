@@ -12,8 +12,13 @@ import javax.swing.border.Border;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("1234");
-	System.out.println("test");
-	System.out.println("test with friend");
+		
+		//Frame 설정 및 추가
+		//Frame 생성 제목표시줄에 다이어리 표시하기 
+		JFrame frame = new JFrame("다이어리");
+		
+		//창 닫으면 프로그램 종료!
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 	}
 }
