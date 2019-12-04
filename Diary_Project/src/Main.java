@@ -34,6 +34,9 @@ public class Main {
 		frame.getContentPane().add(textPanel, "North");
 		frame.getContentPane().add(alarmPanel, "South");
 
+		//TextArea에 컨텐츠가 가리키는 문자열 표시 및 행열 설정
+		JTextArea ta = new JTextArea(content, 40,50);
+
 		
 	}
 }
