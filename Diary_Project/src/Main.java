@@ -29,8 +29,10 @@ public class Main {
 
 		//위 아래 패널의 영역 확인 위해 패널에 배경색 줌.
 		textPanel.setBackground(Color.gray);
-		
+		alarmPanel.setBackground(Color.pink);
 
+		frame.getContentPane().add(textPanel, "North");
+		frame.getContentPane().add(alarmPanel, "South");
 
 		
 	}
