@@ -24,6 +24,10 @@ public class Main {
 		//패널 객체 생성 (텍스트)
 		JPanel textPanel = new JPanel();
 		JPanel alarmPanel = new JPanel();
+
+		alarmPanel.setToolTipText("기타 사용을 위해 이용할 부분");
+
+
 		
 	}
 }
