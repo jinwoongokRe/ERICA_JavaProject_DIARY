@@ -54,10 +54,12 @@ public class Main {
 		//textArea에 검정테두리와 여백으로 구성된 경계선 설정
 		ta.setBorder(BorderFactory.createCompoundBorder(lineBorder, emptyBorder));
 
+		//textArea에 스크롤 펑션 추가 및 Panel에 삽입
+		textPanel.add(new JScrollPane(ta));
 
 
 
-
+		frame.setVisible(true); //frame 보이게 설정
 	}
+	static String content = "";
 }
-ㅑ
