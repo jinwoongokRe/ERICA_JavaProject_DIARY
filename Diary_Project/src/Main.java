@@ -37,6 +37,24 @@ public class Main {
 		//TextArea에 컨텐츠가 가리키는 문자열 표시 및 행열 설정
 		JTextArea ta = new JTextArea(content, 40,50);
 
-		
+		//행 넘기기 true
+		ta.setLineWrap(true);
+		//행 넘길 때 행의 마지막 단어가 두행에 걸쳐 나뉘지 않도록 하기
+		ta.setWrapStyleWord(true);
+
+		//툴팁제작하기
+		ta.setToolTipText("이곳에 텍스트를 입력해요..!");
+
+		//textArea 테두리 색 검정, 두께 3
+		Border lineBorder = BorderFactory.createLineBorder(Color.black, 3);
+
+		//텍스트와 textArea 경계 사이에 여백을 두기 위해서 emptyBorder 생성
+		Border emptyBorder = BorderFactory.createEmptyBorder(7,7,7,7);
+
+
+
+
+
 	}
 }
+ㅑ
