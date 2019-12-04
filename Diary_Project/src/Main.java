@@ -20,5 +20,10 @@ public class Main {
 		//창 닫으면 프로그램 종료!
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		//패널 설정 및 추가
+		//패널 객체 생성 (텍스트)
+		JPanel textPanel = new JPanel();
+		JPanel alarmPanel = new JPanel();
+		
 	}
 }
