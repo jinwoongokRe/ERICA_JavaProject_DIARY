@@ -76,10 +76,21 @@ public class Main {
 		menuBar.add(fileMenu); //파일 메뉴
 
 		fileMenu.add(newItem);
+		fileMenu.addSeparator();
 		fileMenu.add(openItem);
+		fileMenu.addSeparator();
 		fileMenu.add(saveItem);
+		fileMenu.addSeparator();
 		fileMenu.add(saveasItem);
+		fileMenu.addSeparator();
 		fileMenu.add(closeItem);
+
+		// 메뉴마다 구분선도 추가함.
+		
+		//
+		//
+		// 파트 별 구분선
+		FileDialog mSave = new FileDialog(frame);
 
 
 
