@@ -61,6 +61,26 @@ public class Main {
 		//메뉴바 만들기
 		JMenuBar menuBar = new JMenuBar();
 
+		// 파일 메뉴 만들기
+		JMenu fileMenu = new JMenu("파일");
+
+		// 파일 메뉴 안에서 동작할 것들
+		JMenuItem newItem = new JMenuItem("새 일기 만들");
+		JMenuItem openItem = new JMenuItem("기존 일기 열기");
+		JMenuItem saveItem = new JMenuItem("일기 저장하기");
+		JMenuItem saveasItem = new JMenuItem("다른 일기로 저장하기");
+		JMenuItem closeItem = new JMenuItem("닫기");
+
+		frame.setJMenuBar(menuBar);
+
+
+
+
+
+
+
+
+
 		frame.pack(); // 화면에 맞게 프레임 조절
 		frame.setVisible(true); //frame 보이게 설정
 	}
