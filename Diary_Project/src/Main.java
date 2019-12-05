@@ -58,8 +58,11 @@ public class Main {
 		textPanel.add(new JScrollPane(ta));
 
 
+		//메뉴바 만들기
+		JMenuBar menuBar = new JMenuBar();
 
+		frame.pack(); // 화면에 맞게 프레임 조절
 		frame.setVisible(true); //frame 보이게 설정
 	}
-	static String content = "유리야 사랑해 고마"; //처음에는 아무것도 없도록 페이지 초기화  
+	static String content = ""; //처음에는 아무것도 없도록 페이지 초기화
 }
