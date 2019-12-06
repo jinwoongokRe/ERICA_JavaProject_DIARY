@@ -93,13 +93,21 @@ public class Main {
 		FileDialog mSave = new FileDialog(frame, "일기 저장하기",FileDialog.SAVE);
 		FileDialog mOpen = new FileDialog(frame,"기존 일기 열기", FileDialog.LOAD);
 
-		newItem.addActionListener(new ActionListener() {
+		newItem.addActionListener(new ActionListener() { // 새 일기 만들기
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ta.setText(content);
 				frame.setTitle("소박한 다이어리");
 				flag =0;
 				frame.setSize(600,810);
+			}
+		});
+
+		openItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				mOpen.setVisible(true);
+				String data = mOpen.getDirectory() + mOpen.getFile();
 			}
 		});
 
@@ -116,5 +124,5 @@ public class Main {
 		frame.setVisible(true); //frame 보이게 설정
 	}
 	static String content = ""; //처음에는 아무것도 없도록 페이지 초기화
-	static int flag =0; // 일기장 저장이랑 다른 일기로 저장에 이용 
+	static int flag =0; // 일기장 저장이랑 다른 일기로 저장에 이용
 }
