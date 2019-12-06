@@ -129,6 +129,18 @@ public class Main {
 			}
 		});
 
+		saveItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				if(flag ==0)
+				{
+					mSave.setVisible(true);
+				}
+
+			}
+		});
+
 
 
 
