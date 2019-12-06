@@ -103,11 +103,16 @@ public class Main {
 			}
 		});
 
-		openItem.addActionListener(new ActionListener() {
+		openItem.addActionListener(new ActionListener() { //기존 일기 열기
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				mOpen.setVisible(true);
 				String data = mOpen.getDirectory() + mOpen.getFile();
+				try{
+					Stirng str="";
+					FileReader fr = new FileReader(data);
+					BufferedReader br = new BufferedReader(fr);
+				}
 			}
 		});
 
