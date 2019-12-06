@@ -108,10 +108,23 @@ public class Main {
 			public void actionPerformed(ActionEvent e) {
 				mOpen.setVisible(true);
 				String data = mOpen.getDirectory() + mOpen.getFile();
-				try{
-					Stirng str="";
+				try {
+					String str = "";
 					FileReader fr = new FileReader(data);
 					BufferedReader br = new BufferedReader(fr);
+
+					ta.setText(""); //일단 초기화
+					while ((str = br.readLine()) != null) {   //	str에 남아둔 내용이 null이 아닐시..
+
+						ta.append(str); //str 내용 추가
+						ta.append("\r\n");// readline의 줄바꿈을 도움 
+					}
+					br.close();
+					String Filename = mOpen.getFile();
+					frame.setTitle(Filename);
+					flag = 1;
+				} catch (Exception e1) {
+
 				}
 			}
 		});
