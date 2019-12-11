@@ -198,6 +198,24 @@ public class Main {
 				String data = mSave.getDirectory() + mSave.getFile(); //파일의 디렉토리 정보와 파일명을 얻는다.(일기장 정보)
 				try{
 					FileWriter fw = new FileWriter(data + ".txt"); //일기를 txt파일로 저장.
+					BufferedWriter bw = new BufferedWriter(fw);
+
+					String str = ta.getText();
+					for(int i=0; i<str.length(); i++)
+					{
+						if(str.charAt(i) =='\n')
+						{
+							System.out.println("find");
+							bw.newLine();
+						}
+						else
+							bw.write(str.charAt(i));	//Textarea에 bw객체에 있는 내용을 넣는다.
+					}
+					bw.close();
+					String Filename = mSave.getFile();
+					frame.setTitle(Filename + ".txt");
+				}catch (Exception e1) {
+
 				}
 			}
 		});
