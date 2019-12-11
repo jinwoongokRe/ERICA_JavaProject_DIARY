@@ -155,10 +155,10 @@ public class Main {
 						}
 
 						bw.close(); //bufferdwriter 사용했으므로 close해야함.
-						String Filename = mSave.getFile() //저장할 파일의 이름을 넣음.
+						String Filename = mSave.getFile() ;//저장할 파일의 이름을 넣음.
 						frame.setTitle(Filename + ".txt"); //프레임 명을 파일명으로 바꾸기
 
-					}catch (Exception e){
+					}catch (Exception e1){
 
 					}
 					flag =1;
@@ -188,6 +188,17 @@ public class Main {
 					}
 				}
 
+			}
+		});
+
+		saveasItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				mSave.setVisible(true);
+				String data = mSave.getDirectory() + mSave.getFile(); //파일의 디렉토리 정보와 파일명을 얻는다.(일기장 정보)
+				try{
+					FileWriter fw = new FileWriter(data + ".txt"); //일기를 txt파일로 저장.
+				}
 			}
 		});
 
