@@ -136,6 +136,56 @@ public class Main {
 				if(flag ==0)
 				{
 					mSave.setVisible(true);
+					String data = mSave.getDirectory() + mSave.getFile(); //파일의 디렉토리 정보 및 파일명 가져오기
+
+					try{
+						FileWriter fw = new FileWriter(data + ".txt"); //txt파일로 저장하게 하기.
+						BufferedWriter bw = new BufferedWriter(fw);
+
+						String str = ta.getText();
+						for(int i=0; i< str.length(); i++)
+						{
+							if(str.charAt(i) =='\n')
+							{
+								System.out.println("find");
+								bw.newLine();
+							}
+							else
+								bw.write(str.charAt(i)); //ta에 bw객체에 있는 내용을 넣는다.
+						}
+
+						bw.close(); //bufferdwriter 사용했으므로 close해야함.
+						String Filename = mSave.getFile() //저장할 파일의 이름을 넣음.
+						frame.setTitle(Filename + ".txt"); //프레임 명을 파일명으로 바꾸기
+
+					}catch (Exception e){
+
+					}
+					flag =1;
+				}
+				else if(flag ==1)
+				{
+					String data = mSave.getDirectory() + mSave.getFile(); //파일 디렉토리 정보랑 파일명 얻기
+
+					try{
+						FileWriter fw = new FileWriter(data + ".txt"); //txt파일로 저장하기.
+						BufferedWriter bw = new BufferedWriter(fw);
+
+						String str = ta.getText();
+						for(int i=0; i<str.length(); i++)
+						{
+							if(str.charAt(i) =='\n')
+							{
+								System.out.println("find");
+								bw.newLine();
+							}
+							else
+								bw.write(str.charAt(i));  //Textarea에 bw객체에 있는 내용을 넣는다.
+						}
+						bw.close();
+					}catch (Exception e2){
+
+					}
 				}
 
 			}
