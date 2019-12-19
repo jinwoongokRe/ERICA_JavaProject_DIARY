@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.*;
 import javax.swing.border.Border;
 
@@ -12,6 +14,11 @@ import javax.swing.border.Border;
 
 public class Main {
 	public static void main(String[] args) {
+		SimpleDateFormat format1 = new SimpleDateFormat("yyyy년 MM월 dd일");
+
+		Date time = new Date();
+
+		String timetime = format1.format(time);
 		
 		//Frame 설정 및 추가
 		//Frame 생성 제목표시줄에 다이어리 표시하기 
@@ -70,6 +77,7 @@ public class Main {
 		JMenuItem saveItem = new JMenuItem("일기 저장하기");
 		JMenuItem saveasItem = new JMenuItem("다른 일기로 저장하기");
 		JMenuItem closeItem = new JMenuItem("닫기");
+		JMenuItem dateItem = new JMenuItem(timetime);
 
 		frame.setJMenuBar(menuBar);
 
@@ -84,6 +92,7 @@ public class Main {
 		fileMenu.add(saveasItem);
 		fileMenu.addSeparator();
 		fileMenu.add(closeItem);
+		fileMenu.add(dateItem);
 
 		// 메뉴마다 구분선도 추가함.
 		
@@ -239,6 +248,9 @@ public class Main {
 		frame.pack(); // 화면에 맞게 프레임 조절
 		frame.setVisible(true); //frame 보이게 설정
 	}
+
+
 	static String content = ""; //처음에는 아무것도 없도록 페이지 초기화
+
 	static int flag =0; // 일기장 저장이랑 다른 일기로 저장에 이용
 }
