@@ -70,6 +70,7 @@ public class Main {
 
 		// 파일 메뉴 만들기
 		JMenu fileMenu = new JMenu("파일");
+		JMenu dateMenu = new JMenu(timetime);
 
 		// 파일 메뉴 안에서 동작할 것들
 		JMenuItem newItem = new JMenuItem("새 일기 만들기");
@@ -82,6 +83,7 @@ public class Main {
 		frame.setJMenuBar(menuBar);
 
 		menuBar.add(fileMenu); //파일 메뉴
+		menuBar.add(dateMenu); // 마지막 날짜 메뉴버튼 추가 
 
 		fileMenu.add(newItem);
 		fileMenu.addSeparator();
